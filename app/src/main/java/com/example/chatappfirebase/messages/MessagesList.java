@@ -2,16 +2,17 @@ package com.example.chatappfirebase.messages;
 
 public class MessagesList {
 
-    private String name,mobile,lastMessage,profilePic;
+    private String name,mobile,lastMessage,profilePic,chatKey;
 
     private int unseenMessage;
 
-    public MessagesList(String name, String mobile, String lastMessage,String profilePic, int unseenMessage) {
+    public MessagesList(String name, String mobile, String lastMessage,String profilePic, int unseenMessage,String chatKey) {
         this.name = name;
         this.mobile = mobile;
         this.lastMessage = lastMessage;
         this.unseenMessage = unseenMessage;
         this.profilePic = profilePic;
+        this.chatKey = chatKey;
     }
 
     public String getName() {
@@ -32,5 +33,9 @@ public class MessagesList {
 
     public int getUnseenMessage() {
         return unseenMessage;
+    }
+
+    public String getChatKey() {
+        return chatKey;
     }
 }
